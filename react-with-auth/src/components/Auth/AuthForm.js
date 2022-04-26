@@ -24,12 +24,13 @@ const AuthForm = () => {
 
     setIsLoading(true);
     let url;
+    //API KEY는 일단 보안상 삭제
     if (isLogin) {
       url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDlKtn2d7x2yIXWkLQF3OCwnLAFuuVW6v8";
+        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]";
     } else {
       url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDlKtn2d7x2yIXWkLQF3OCwnLAFuuVW6v8";
+        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]";
     }
     fetch(url, {
       method: "POST",

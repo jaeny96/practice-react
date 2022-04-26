@@ -11,8 +11,9 @@ const ProfileForm = () => {
     e.preventDefault();
     const enteredNewPwd = newPwdInputRef.current.value;
 
+    //API KEY는 일단 보안상 삭제
     fetch(
-      "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyDlKtn2d7x2yIXWkLQF3OCwnLAFuuVW6v8",
+      "https://identitytoolkit.googleapis.com/v1/accounts:update?key=[API_KEY]",
       {
         method: "POST",
         body: JSON.stringify({
